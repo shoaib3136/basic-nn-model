@@ -15,7 +15,6 @@ After training, test the model with your testing data to see how well it perform
 ## Neural Network Model
 ![NN model](image5.png)
 
-
 ## DESIGN STEPS
 
 ### STEP 1:
@@ -77,7 +76,8 @@ X_train1 = Scaler.transform(X_train)
 from tensorflow.keras import layers
 from tensorflow.keras import models
 model=models.Sequential([
-    layers.Dense(8,activation='relu',input_shape=[1]),
+    layers.Dense(1,activation='relu',input_shape=[1]),
+    layers.Dense(8,activation='relu'),
     layers.Dense(1)
 ])
 model.compile(optimizer='rmsprop',loss='mse')
@@ -108,6 +108,7 @@ model.predict(X_n1_1)
 
 ### New Sample Data Prediction
 ![Prediction](image4.png)
+
 
 
 ## RESULT
